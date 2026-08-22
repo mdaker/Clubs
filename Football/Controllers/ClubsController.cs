@@ -19,5 +19,25 @@ namespace Football.Controllers
          
             return View(model);
         }
+
+        public IActionResult Add()
+        {
+            
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Add(Club club)
+        {
+
+            Club clb = new Club() {
+            Name=club.Name,
+            City=club.City
+            };
+            _clubRepo.Add(clb);
+
+            return View();
+        }
     }
 }

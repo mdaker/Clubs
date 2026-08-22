@@ -8,6 +8,6 @@
 <h1>Clubs</h1>
 @foreach(var club in Model)
 {
-    @club.Name 
+    <span class="mr-2">@club.Id</span><span>-</span> <span class="ml-2">@club.Name</span>
     <br />
 }

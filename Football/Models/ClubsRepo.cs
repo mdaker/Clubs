@@ -11,5 +11,12 @@
         {
             return context.Clubs.ToList();
         }
+
+        public Club Add(Club club)
+        {
+            context.Clubs.Add(club);
+            context.SaveChanges();
+            return club;
+        }
     }
 }

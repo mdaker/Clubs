@@ -1,0 +1,7 @@
+﻿@model Club
+
+<form asp-action="Add" asp-controller="Clubs" method="post">
+	Name<input asp-for="Name"  />
+	City<input asp-for="City" />
+	<button class="btn btn-primary" type="submit">Save</button>
+</form>
