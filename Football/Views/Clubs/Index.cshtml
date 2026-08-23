@@ -6,8 +6,24 @@
 }
 
 <h1>Clubs</h1>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Edit</th>
+
+    </tr>
+    
+
 @foreach(var club in Model)
 {
-    <span class="mr-2">@club.Id</span><span>-</span> <span class="ml-2">@club.Name</span>
-    <br />
+    <tr>
+        <td>@club.Id</td>
+        <td>@club.Name</td>
+        <td>@club.City</td>
+            <td><a class="btn btn-primary" asp-controller="Clubs" asp-action="Edit" asp-route-id="@club.Id">Edit</a></td>
+    </tr>
 }
+
+</table>

@@ -18,5 +18,18 @@
             context.SaveChanges();
             return club;
         }
+
+        public Club GetClub(int Id)
+        {
+            return context.Clubs.Find(Id);
+        }
+
+        public Club Update(Club clubChanges)
+        {
+            var car = context.Clubs.Attach(clubChanges);
+            car.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            context.SaveChanges();
+            return clubChanges;
+        }
     }
 }

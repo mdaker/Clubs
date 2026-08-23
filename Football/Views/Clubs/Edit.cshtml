@@ -1,0 +1,8 @@
+﻿@model Club
+
+<form asp-action="Edit" asp-controller="Clubs" method="post">
+	Id<input asp-for="Id" disabled  />
+	Name<input asp-for="Name"  />
+	City<input asp-for="City" />
+	<button class="btn btn-primary" type="submit">Save</button>
+</form>
