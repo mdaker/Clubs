@@ -8,5 +8,7 @@
         Club GetClub(int Id);
 
         Club Update(Club clubChanges);
+
+        Club Delete(int Id);
     }
 }

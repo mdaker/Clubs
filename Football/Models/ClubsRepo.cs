@@ -31,5 +31,16 @@
             context.SaveChanges();
             return clubChanges;
         }
+
+        public Club Delete(int Id)
+        {
+            Club club = context.Clubs.Find(Id);
+            if (club != null)
+            {
+                context.Clubs.Remove(club);
+                context.SaveChanges();
+            }
+            return club;
+        }
     }
 }

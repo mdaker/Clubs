@@ -6,14 +6,17 @@
     <title>@ViewData["Title"] - Football</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Football.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Football</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Football
+                    <img src="~/images/animal.png" id="animal" />
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -21,11 +24,15 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Clubs" asp-action="Index">All Clubs</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Clubs" asp-action="Index">
+                                All Clubs <i class="fa-solid fa-futbol"></i>
+                                </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Clubs" asp-action="Add">Add New</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Clubs" asp-action="Add">
+                                Add New <i class="fa-solid fa-plus"></i>
+                                </a>
                         </li>
                         
                     </ul>

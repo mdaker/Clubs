@@ -57,6 +57,16 @@ namespace Football.Controllers
 
             return View(club);
         }
+
+        [HttpPost]
+        public IActionResult Delete(int Id)
+        {
+
+            Club club = _clubRepo.GetClub(Id);
+            _clubRepo.Delete(Id);
+
+            return RedirectToAction("index", new { id = club.Id });
+        }
     }
 
 
