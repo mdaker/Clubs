@@ -30,9 +30,19 @@
             </a>
             </td>
             <td>
+                <a id="deletebtn_@club.Id" href="#" class="m-1" title="Delete Club"
+                   onclick="confirmDelete('@club.Id', true)">
+                    <i class="fas fa-trash-alt fa-lg text-danger"></i>
+                </a>
                 <form asp-action="Delete" asp-controller="Clubs" method="post">
-                    <input type="hidden" name="Id" value="@club.Id" />
-                    <button id="sub" type="submit"><i class="fa-solid fa-xmark fa-lg text-danger"></i></button>
+                    <span id="confirmDeleteSpan_@club.Id" style="display:none;">
+                        <span>Are you sure you want to delete?</span>
+                        <button type="submit" class="btn btn-danger">Yes <i class="fas fa-check"></i></button>
+                        <a href="#" class="btn btn-primary"
+                           onclick="confirmDelete('@club.Id', false)">No <i class="fas fa-times"></i></a>
+                        <input type="hidden" name="Id" value="@club.Id" />
+                        
+                    </span>
                 </form>
                 
         </td>
