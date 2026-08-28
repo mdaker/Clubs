@@ -5,3 +5,11 @@
 	City<input asp-for="City" />
 	<button class="btn btn-primary" type="submit">Save</button>
 </form>
+@if (ViewData["Error"] == "1")
+{
+	<span class="text-danger">@ViewData["Msg"]</span>
+}
+else
+{
+	<span class="text-success">@ViewData["Msg"]</span>
+}

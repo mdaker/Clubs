@@ -8,3 +8,12 @@
 		<i class="fa-solid fa-floppy-disk fa-lg"></i>
 	</button>
 </form>
+
+@if (ViewData["Error"] == "1")
+{
+	<span class="text-danger">@ViewData["Msg"]</span>
+}
+else
+{
+	<span class="text-success">@ViewData["Msg"]</span>
+}
