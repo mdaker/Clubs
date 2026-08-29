@@ -12,6 +12,10 @@
             return context.Clubs.ToList();
         }
 
+        public IEnumerable<ChampoinsLeague> GetAllChampoins()
+        {
+            return context.ChampoinsLeagues.ToList();
+        }
         public Club Add(Club club)
         {
             context.Clubs.Add(club);

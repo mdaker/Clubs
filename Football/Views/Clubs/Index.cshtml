@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Club>
+﻿@model IEnumerable<ChampoinsLeague>
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -11,7 +11,7 @@
     <tr>
         <th>No</th>
         <th>Name</th>
-        <th>City</th>
+        <th>League</th>
         <th>Edit</th>
         <th>Delete</th>
 
@@ -23,7 +23,7 @@
     <tr>
         <td>@a</td>
         <td>@club.Name</td>
-        <td>@club.City</td>
+        <td>@club.Total</td>
             <td><a asp-controller="Clubs" asp-action="Edit" asp-route-id="@club.Id">
                     <i class="fa-solid fa-pen-to-square fa-lg"></i>
                     

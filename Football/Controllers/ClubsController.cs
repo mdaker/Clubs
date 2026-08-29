@@ -14,10 +14,18 @@ namespace Football.Controllers
         }
         public IActionResult Index()
         {
-            Club club = new Club();
-            var model = _clubRepo.GetAllClubs();
+            ChampoinsLeague club = new ChampoinsLeague();
+            var model = _clubRepo.GetAllChampoins().OrderByDescending(x => x.Total);
 
             return View(model);
+        }
+
+        public IActionResult IndexLeague()
+        {
+            ChampoinsLeague club = new ChampoinsLeague();
+            var model = _clubRepo.GetAllChampoins().Where(x => x.Total > 0).OrderByDescending(x => x.Total);
+
+            return View("Index", model);
         }
 
         public IActionResult Add()

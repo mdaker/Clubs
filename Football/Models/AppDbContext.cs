@@ -11,6 +11,7 @@ namespace Football.Models
         {
         }
         public DbSet<Club> Clubs { get; set; }
+        public DbSet<ChampoinsLeague> ChampoinsLeagues { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
